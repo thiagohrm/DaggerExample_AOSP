@@ -1,0 +1,32 @@
+android_app {
+    name: "DaggerExample",
+    manifest: "app/src/main/AndroidManifest.xml",
+    platform_apis: true,
+    certificate: "platform",
+    target_sdk_version: "31",
+    min_sdk_version: "31",
+    privileged: true,
+    defaults: [
+    ],
+    static_libs: [
+        "androidx.lifecycle_lifecycle-runtime",
+        "androidx.lifecycle_lifecycle-extensions",
+        "jetbrains-annotations",
+        "kotlinx-coroutines-android",
+        "gson-prebuilt-jar",
+        "hilt_android",
+        "androidx.appcompat_appcompat",
+        "androidx-constraintlayout_constraintlayout",
+        "com.google.android.material_material",
+    ],
+    srcs: [
+        "app/src/main/java/**/*.java",
+        "app/src/main/java/**/*.kt",
+    ],
+    plugins: ["androidx.room_room-compiler-plugin"],
+    resource_dirs: [
+        "app/src/main/res"
+    ],
+}
+
+
